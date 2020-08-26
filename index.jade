@@ -3,9 +3,148 @@ html(lang="ru")
 head
 	meta(charset="UTF-8")
 	title Document
+	link(rel="stylesheet", href="css/bootstrap.min.css")
+	link(rel="stylesheet", href="css/jquery.bxslider.css")
+	link(rel="stylesheet", href="css/style.css")
+
+	script(src="http://code.jquery.com/jquery-latest.js")
+	//- script(src="js/bootstrap.min.js")
+
+	script(src="js/jquery.bxslider.js")
+	script(src="js/app.js")
 body
-	include ./templates/header.jade
+	.wraper.container-fluid
+		include ./templates/menu.jade
+		include ./templates/header.jade
+		
+		.row
+			.aboutme__wrap
+				.aboutme
+					.aboutme__section-main
+						h2.section__title Обо мне
 
-	p hello world
+						.aboutme__left-block
+							p.aboutme__paragraph 
+								| Меня зовут Елена Ширяева. 
+								b Я - дизайнер интерьера
 
-	include ./templates/footer.jade
+							p.aboutme__paragraph У меня высшее профильное образование и я работаю в сегменте жилые интерьеры с 2015 года. Главными моими задачами являются создание уюта и единого стиля с учетом эргономики и функциональности, а также воплощение мечты в реальность.
+							p.aboutme__paragraph Я получаю огромное удовольствие, когда вижу счастливые лица!
+
+						.aboutme__right-block
+							img(src="images/self.jpg", alt="self.jpg")
+
+
+					.box.aboutme__section-pagers.page__pagers 
+						.pagers__wrap
+							span.pagers_number 02
+							ul.pagers__list
+								li.pager__element
+								li.pager__element.active
+								li.pager__element
+								li.pager__element
+								li.pager__element
+								li.pager__element
+
+					.box.aboutme__section-footer
+						.slash-block
+						.section-footer__element 
+							| Дизайн проект за 
+							span 5 
+							| дней
+						.section-footer__element 
+							| Более
+							span 100
+							| проектов
+						.section-footer__element 
+							span 5 
+							| лет опыта
+
+
+		.row
+			.steps__wrap
+				.steps__main
+					h2.section__title Этапы дизайн проекта
+
+					.step__blocks
+						.step__block
+							.circle
+								span Выезд на объект и обмер
+						.step__block
+							.circle
+								span Составление ТЗ
+						.step__block
+							.circle
+								span Визуализация
+						.step__block
+							.circle
+								span Чертеж, документация
+						
+				.steps__pages.page__pagers 
+					.pagers__wrap
+							span.pagers_number 03
+							ul.pagers__list
+								li.pager__element
+								li.pager__element
+								li.pager__element.active
+								li.pager__element
+								li.pager__element
+								li.pager__element
+
+
+		.row
+			.sale__wrap
+				.sale__left
+					.sale__content
+						h3 Скидка 20%
+						p Забронируйте видеозвонок, чтобы обсудить ваши потребности и познакомиться с нашей коллекцией виртуально. При желании вы можете показать нам ваше пространство. Но это вовсе не обязательно.
+
+						a.btn Забронирорвать
+
+				.sale__right
+					img(src="images/sale.jpg", alt="sale.jpg")
+
+
+
+		.row 
+			.contact__form 
+				.form__content
+					h4.form__title.section__title Как начать работу?
+
+					p.form__desc Если вы хотите рассчитать стоимость вашего дизайн-проекта, свяжитесь, пожалуйста, с нами любым удобным для вас способом
+
+					.form__labels
+						input(placeholder="Ваше имя").form__input
+						input(placeholder="Номер телефона").form__input
+						input(placeholder="E-mail").form__input
+
+						p.form__policy Мы не передаем данные третьим лицам. Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
+						input(type="submit", value="Отправить").form__btn
+
+
+				.form__pages.page__pagers 
+					.pagers__wrap
+							span.pagers_number 09
+							ul.pagers__list
+								li.pager__element
+								li.pager__element
+								li.pager__element
+								li.pager__element
+								li.pager__element
+								li.pager__element.active
+
+
+
+		.row
+			footer 
+				.footer__left.slash-block
+				.footer__content 
+					.f_content-left 
+						img.logo(src="images/logo2.png", alt="logo2.png")
+					.f_content-right
+						p.footer__contacts +7 (978) 101-50-54
+						p.footer__contacts design@hiriaeva.com
+
+				.footer__right
+
+		//- include ./templates/footer.jade
