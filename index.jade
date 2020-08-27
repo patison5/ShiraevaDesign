@@ -3,6 +3,7 @@ html(lang="ru")
 head
 	meta(charset="UTF-8")
 	title Document
+	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	link(rel="stylesheet", href="css/bootstrap.min.css")
 	link(rel="stylesheet", href="css/jquery.bxslider.css")
 	link(rel="stylesheet", href="css/style.css")
@@ -14,7 +15,7 @@ head
 	script(src="js/app.js")
 body
 	.wraper.container-fluid
-		include ./templates/menu.jade
+		//- include ./templates/menu.jade
 		include ./templates/header.jade
 		
 		.row
@@ -52,13 +53,18 @@ body
 							| Дизайн проект за 
 							span 5 
 							| дней
+						.slash-block-mobile
+						.slash-block-mobile
 						.section-footer__element 
 							| Более
 							span 100
 							| проектов
+						.slash-block-mobile
+						.slash-block-mobile
 						.section-footer__element 
 							span 5 
 							| лет опыта
+						.slash-block-mobile
 
 
 		.row
@@ -100,90 +106,379 @@ body
 				.portfolio__content
 					.portfolio__title
 						.empty
-						h2.section__title Релизованные проекты
+						h2.section__title Реализованные проекты
 
 					.portfolio__menu
 						.slash-block
 						ul.menu__list
-							li.menu__element.active Комнаты
-							li.menu__element Ванные
-							li.menu__element Детские 
-							li.menu__element Гостинные
+							li(data-el_id="portfolio_1").menu__element.active Комнаты
+							li(data-el_id="portfolio_2").menu__element Ванные
+							li(data-el_id="portfolio_3").menu__element Детские 
+							li(data-el_id="portfolio_4").menu__element Гостинные
 
 					.portolio__main-container
 						.empty
 						.main-container__wrap
-							#portfolio_1
-								.portfolio__slide
-									.portfolio__aside-left
-										.a-block
-											img(src="images/1.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/2.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/3.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/4.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/5.jpg")
-											p.img__title Гостинная 45м2
+							#portfolio_1.portfolio_single-wrap
+								.portfolio__wrap
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
 
-									.portfolio__aside-right
-										.a-block
-											img(src="images/6.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/7.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/8.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/9.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/10.jpg")
-											p.img__title Гостинная 45м2
-								.portfolio__slide
-									.portfolio__aside-left
-										.a-block
-											img(src="images/1.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/2.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/3.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/4.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/5.jpg")
-											p.img__title Гостинная 45м2
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
 
-									.portfolio__aside-right
-										.a-block
-											img(src="images/6.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/7.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/8.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/9.jpg")
-											p.img__title Гостинная 45м2
-										.a-block
-											img(src="images/10.jpg")
-											p.img__title Гостинная 45м2
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
+							#portfolio_2.portfolio_single-wrap
+								.portfolio__wrap
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
 
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
 
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
+							#portfolio_3.portfolio_single-wrap
+								.portfolio__wrap
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
+
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
+
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
+							#portfolio_4.portfolio_single-wrap
+								.portfolio__wrap
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
+
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
+									.portfolio__slide
+										.portfolio__aside-left
+											.a-block
+												.a-block__image
+													img(src="images/1.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/2.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/3.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/4.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/5.jpg")
+												p.img__title Гостинная 45м2
+
+										.portfolio__aside-right
+											.a-block
+												.a-block__image
+													img(src="images/6.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/7.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/8.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/9.jpg")
+												p.img__title Гостинная 45м2
+											.a-block
+												.a-block__image
+													img(src="images/10.jpg")
+												p.img__title Гостинная 45м2
 				.portfolio__pagers.page__pagers 
 					.pagers__wrap
 						span.pagers_number 04
@@ -237,7 +532,10 @@ body
 								.price-b__footer
 									.price__value 2000 р/м2
 									a(href="#").price__btn Заказать
-									
+							
+							.price__block-mobile-small
+								.slash-block
+
 							.price__block
 								.price-b__main
 									h5.p-block__title Дизайн-проект
@@ -258,6 +556,8 @@ body
 									.price__value 1000 р/м2
 									a(href="#").price__btn Заказать
 
+							.price__block-mobile
+								.slash-block
 
 							.price__block
 								.price-b__main
@@ -275,6 +575,9 @@ body
 								.price-b__footer
 									.price__value 200 р/м2
 									a(href="#").price__btn Заказать
+
+							.price__block-mobile-small
+								.slash-block
 
 							.price__block
 								.price-b__main
@@ -360,7 +663,7 @@ body
 
 				.form__pages.page__pagers 
 					.pagers__wrap
-							span.pagers_number 09
+							span.pagers_number 06
 							ul.pagers__list
 								li.pager__element
 								li.pager__element

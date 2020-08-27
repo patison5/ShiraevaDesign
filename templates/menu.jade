@@ -6,11 +6,11 @@
 					.square
 					.menu__items
 						.menu__element
-							a(href="#") Обо мне
+							a.menu__link(href="#") Обо мне
 						.menu__element.menu__element-two 
-							a(href="#") Этапы проекта
+							a.menu__link(href="#") Этапы проекта
 						.menu__element 
-							a(href="#") Портфолио
+							a.menu__link(href="#") Портфолио
 
 				.menu__block-row
 					.slash-block
@@ -25,9 +25,9 @@
 				.menu__block-row
 					.menu__items
 						.menu__element 
-							a(href="#") Цены
+							a.menu__link(href="#") Цены
 						.menu__element 
-							a(href="#") Контакты
+							a.menu__link(href="#") Контакты
 						.menu__element.menu__element-contacts
 							p.element__paragraph +7 (985) 101-50-54
 							p.element__paragraph design@shiraeva.com
@@ -38,3 +38,19 @@
 				.menu__block-row
 					.empty-block
 					.slash-block
+
+
+
+	.menu__wraper-mobile
+		.mobile-m__left
+			.square
+			.slash-block
+
+		.mobile-m__middle
+			a(href="#")
+				img.logo(src="images/logo.png", alt="logo.png")
+
+		.mobile-m__right
+			.mobile-m__left
+				.square
+				.slash-block
