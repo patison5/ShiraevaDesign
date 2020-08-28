@@ -140,13 +140,13 @@
 .bx-wrapper .bx-prev {
 	right: 95px;
 	background: #fff;
-	/*background: url(../images/backl_OFF.png) no-repeat 0 0;*/
+	background: #fff url(../images/arrowLeft.png) no-repeat center center ;
 }
 
 .bx-wrapper .bx-next {
 	right: 0;
 	background: #434f5d;
-	/*background: url(../images/forward_OFF.png) no-repeat right 0;*/
+	background: #434f5d url(../images/arrowRight.png) no-repeat center center ;
 }
 
 .bx-wrapper .bx-prev:hover {

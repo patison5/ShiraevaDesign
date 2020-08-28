@@ -2,38 +2,39 @@
 	.menu__wraper
 		menu.menu
 			.menu__block-left
-				.menu__block-row
-					.square
+				.menu__block-row.wow.bounce
+					.square.sandwitch
+						img.sandwitch__img(src="images/menu-2.svg", alt="menu-2.svg")
 					.menu__items
 						.menu__element
-							a.menu__link(href="#") Обо мне
+							a.menu__link.wow.flipInX(href="#aboutme") Обо мне
 						.menu__element.menu__element-two 
-							a.menu__link(href="#") Этапы проекта
+							a.menu__link.wow.flipInX(href="#projects") Этапы проекта
 						.menu__element 
-							a.menu__link(href="#") Портфолио
+							a.menu__link.wow.flipInX(href="#portfolio") Портфолио
 
-				.menu__block-row
+				.menu__block-row.wow.bounce
 					.slash-block
 					.empty-block
 
 			.menu__block-center
 				.menu__element.menu__element-logo
 					a(href="#")
-						img.logo(src="images/logo.png", alt="logo.png")
+						img.logo.wow.bounce(src="images/logo.png", alt="logo.png")
 
-			.menu__block-right
+			.menu__block-right.wow.bounce
 				.menu__block-row
 					.menu__items
 						.menu__element 
-							a.menu__link(href="#") Цены
+							a.menu__link.wow.flipInX(href="#prices") Цены
 						.menu__element 
-							a.menu__link(href="#") Контакты
+							a.menu__link.wow.flipInX(href="#contatct") Контакты
 						.menu__element.menu__element-contacts
-							p.element__paragraph +7 (985) 101-50-54
-							p.element__paragraph design@shiraeva.com
+							p.element__paragraph.wow.flipInX +7 (985) 101-50-54
+							p.element__paragraph.wow.flipInX design@shiraeva.com
 				
 					.square.instagram__wrap
-						img.menu_instagram(src="images/social-network.svg", alt="social-network.svg")
+						img.wow.bounce.menu_instagram(src="images/social-network.svg", alt="social-network.svg")
 
 				.menu__block-row
 					.empty-block
@@ -42,15 +43,39 @@
 
 
 	.menu__wraper-mobile
-		.mobile-m__left
-			.square
-			.slash-block
-
-		.mobile-m__middle
-			a(href="#")
-				img.logo(src="images/logo.png", alt="logo.png")
-
-		.mobile-m__right
+		.mobile__header
 			.mobile-m__left
-				.square
+				.square.sandwitch
+					img.sandwitch__img(src="images/menu-2.svg", alt="menu-2.svg")
 				.slash-block
+
+			.mobile-m__middle
+				a(href="#")
+					img.logo(src="images/logo.png", alt="logo.png")
+
+			.mobile-m__right
+				.square.instagram__wrap
+					a(href="#")
+						img.menu_instagram(src="images/social-network.svg", alt="social-network.svg")
+				.slash-block
+
+
+
+
+.mobile-menu__wrap
+	.mobile-menu__content
+		.m-menu__left
+		.m-menu__middle
+			ul.m-m__list
+				li.m-m__element
+					a.menu__link(href="#aboutme") Обо мне
+				li.m-m__element
+					a.menu__link(href="#projects") Этапы проекта
+				li.m-m__element
+					a.menu__link(href="#portfolio") Портфолио
+				li.m-m__element
+					a.menu__link(href="#contatct") Контакты
+
+			p.m-m__contact +7 (985) 101-50-54
+			p.m-m__contact design@shiraeva.com
+		.m-menu__right

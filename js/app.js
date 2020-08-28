@@ -1,3 +1,5 @@
+new WOW().init();
+
 window.onload = function() {
 
 	var bxs = $(document).ready(function(){
@@ -51,4 +53,84 @@ window.onload = function() {
 			console.log(portfolioWrap)
 		})
 	}
+
+
+
+
+
+	
+	if (window.innerWidth <= 1024) {
+		var menuWrapper;
+
+		if (window.innerWidth <= 460) {
+			menuWrapper = document.getElementsByClassName('menu__wraper-mobile')[0]
+		} else {
+			menuWrapper = document.getElementsByClassName('menu__wraper')[0]
+		}
+		// console.log(screen.width)
+
+		var sandwitchBtns = document.getElementsByClassName('sandwitch');
+		var menuWraperHeight = window.getComputedStyle(menuWrapper, null).height;
+		var menuWrap = document.getElementsByClassName('mobile-menu__wrap')[0];
+		menuWrap.style.top = menuWraperHeight;
+
+
+		console.log(menuWraperHeight)
+
+
+		for (var i = 0; i < sandwitchBtns.length; i++) {
+			sandwitchBtns[i].addEventListener('click', function (e) {
+				e.preventDefault();
+				menuWrap.classList.toggle('active');
+				console.log(this)
+			})
+		}
+	} else {
+		// document.getElementsByClassName('sandwitch__img')[0].style.display = "none";
+		
+	}
+
+
+
+
+	console.log(document.body.clientWidth)
+	console.log(window.innerWidth)
+
+	
+	console.log()
+
+
+
+
+
+
+      $(document).ready(function(){
+        $(".menu__link").on("click", function (event) {
+          event.preventDefault();
+         	var id  = $(this).attr('href'),
+			mg = $('.header-wrap').outerHeight(),
+			top = $(id).offset().top - mg;
+			// top = $(id).offset().top - mg - 15;
+
+			$('.mobile-menu__wrap').toggleClass('active');
+
+			$('body, html').animate({scrollTop: top}, 1500);
+        });
+      });
+
+
+
+      ;( function( $ ) {
+
+		$( '.lightzoom' ).lightzoom( {
+			speed:                 400,   // скорость появления
+			imgPadding:            5,    // значение отступа у изображения
+			overlayOpacity:        '0.5', // прозрачность фона (от 0 до 1)
+			viewTitle:             false, // true, если надо показывать подпись к изобажению
+			isOverlayClickClosing: true, // true, если надо закрывать окно при клике по затемненной области
+			isWindowClickClosing:  true, // true, если надо закрывать окно при клике по любой области
+			isEscClosing:          true  // true, если надо закрывать окно при нажатии на кнопку Esc
+		} );
+
+	} )( jQuery );   
 }

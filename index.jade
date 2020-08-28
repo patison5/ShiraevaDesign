@@ -6,22 +6,26 @@ head
 	meta(name="viewport", content="width=device-width, initial-scale=1.0")
 	link(rel="stylesheet", href="css/bootstrap.min.css")
 	link(rel="stylesheet", href="css/jquery.bxslider.css")
+	link(rel="stylesheet", href="css/lightzoom.css")
 	link(rel="stylesheet", href="css/style.css")
+	link(rel="stylesheet", href="css/animate.css")
 
 	script(src="http://code.jquery.com/jquery-latest.js")
 	//- script(src="js/bootstrap.min.js")
 
+	script(src="js/lightzoom.js")
+	script(src="js/wow.min.js")
 	script(src="js/jquery.bxslider.js")
 	script(src="js/app.js")
 body
 	.wraper.container-fluid
-		//- include ./templates/menu.jade
+		include ./templates/menu.jade
 		include ./templates/header.jade
 		
 		.row
-			.aboutme__wrap
+			.aboutme__wrap#aboutme
 				.aboutme
-					.aboutme__section-main
+					.aboutme__section-main.wow.pulse(data-wow-duration="1s",  data-wow-offset="120")
 						h2.section__title Обо мне
 
 						.aboutme__left-block
@@ -36,7 +40,7 @@ body
 							img(src="images/self.jpg", alt="self.jpg")
 
 
-					.box.aboutme__section-pagers.page__pagers 
+					.box.aboutme__section-pagers.page__pagers.wow.fadeInRight
 						.pagers__wrap
 							span.pagers_number 02
 							ul.pagers__list
@@ -47,7 +51,7 @@ body
 								li.pager__element
 								li.pager__element
 
-					.box.aboutme__section-footer
+					.box.aboutme__section-footer.wow.flipInX
 						.slash-block
 						.section-footer__element 
 							| Дизайн проект за 
@@ -68,25 +72,25 @@ body
 
 
 		.row
-			.steps__wrap
+			.steps__wrap#projects
 				.steps__main
 					h2.section__title Этапы дизайн проекта
 
 					.step__blocks
-						.step__block
+						.step__block.wow.fadeInLeft(data-wow-delay="0.7s", data-wow-offset="120")
 							.circle
 								span Выезд на объект и обмер
-						.step__block
+						.step__block.wow.fadeInLeft(data-wow-delay="0.3s", data-wow-offset="120")
 							.circle
 								span Составление ТЗ
-						.step__block
+						.step__block.wow.fadeInRight(data-wow-delay="0.3s", data-wow-offset="120")
 							.circle
 								span Визуализация
-						.step__block
+						.step__block.wow.fadeInRight(data-wow-delay="0.7s", data-wow-offset="120")
 							.circle
 								span Чертеж, документация
 						
-				.steps__pages.page__pagers 
+				.steps__pages.page__pagers.wow.fadeInRight(data-wow-delay="1s")
 					.pagers__wrap
 						span.pagers_number 03
 						ul.pagers__list
@@ -102,14 +106,15 @@ body
 
 
 		.row
-			.portfolio
+			.portfolio#portfolio
 				.portfolio__content
 					.portfolio__title
 						.empty
-						h2.section__title Реализованные проекты
+						h2.section__title.wow.flipInX Реализованные проекты
 
 					.portfolio__menu
 						.slash-block
+						.portfolio__mobile-helper
 						ul.menu__list
 							li(data-el_id="portfolio_1").menu__element.active Комнаты
 							li(data-el_id="portfolio_2").menu__element Ванные
@@ -123,91 +128,111 @@ body
 								.portfolio__wrap
 									.portfolio__slide
 										.portfolio__aside-left
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
 									.portfolio__slide
 										.portfolio__aside-left
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
-											.a-block
+											.a-block.wow.fadeIn
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
 							#portfolio_2.portfolio_single-wrap
 								.portfolio__wrap
@@ -215,89 +240,109 @@ body
 										.portfolio__aside-left
 											.a-block
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная
 											.a-block
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
 											.a-block
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
 									.portfolio__slide
 										.portfolio__aside-left
 											.a-block
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
 											.a-block
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
 							#portfolio_3.portfolio_single-wrap
 								.portfolio__wrap
@@ -305,89 +350,109 @@ body
 										.portfolio__aside-left
 											.a-block
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная
 											.a-block
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
 											.a-block
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
 									.portfolio__slide
 										.portfolio__aside-left
 											.a-block
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
 											.a-block
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
 							#portfolio_4.portfolio_single-wrap
 								.portfolio__wrap
@@ -395,91 +460,111 @@ body
 										.portfolio__aside-left
 											.a-block
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
 											.a-block
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
 									.portfolio__slide
 										.portfolio__aside-left
 											.a-block
 												.a-block__image
-													img(src="images/1.jpg")
+													a.lightzoom(href="images/1.jpg")
+														img(src="images/1.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/2.jpg")
+													a.lightzoom(href="images/2.jpg")
+														img(src="images/2.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/3.jpg")
+													a.lightzoom(href="images/3.jpg")
+														img(src="images/3.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/4.jpg")
+													a.lightzoom(href="images/4.jpg")
+														img(src="images/4.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/5.jpg")
+													a.lightzoom(href="images/5.jpg")
+														img(src="images/5.jpg")
 												p.img__title Гостинная 45м2
 
 										.portfolio__aside-right
 											.a-block
 												.a-block__image
-													img(src="images/6.jpg")
+													a.lightzoom(href="images/6.jpg")
+														img(src="images/6.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/7.jpg")
+													a.lightzoom(href="images/7.jpg")
+														img(src="images/7.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/8.jpg")
+													a.lightzoom(href="images/8.jpg")
+														img(src="images/8.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/9.jpg")
+													a.lightzoom(href="images/9.jpg")
+														img(src="images/9.jpg")
 												p.img__title Гостинная 45м2
 											.a-block
 												.a-block__image
-													img(src="images/10.jpg")
+													a.lightzoom(href="images/10.jpg")
+														img(src="images/10.jpg")
 												p.img__title Гостинная 45м2
-				.portfolio__pagers.page__pagers 
+				.portfolio__pagers.page__pagers.wow.fadeInRight
 					.pagers__wrap
 						span.pagers_number 04
 						ul.pagers__list
@@ -493,7 +578,7 @@ body
 
 
 		.row
-			.prices
+			.prices#prices
 				.prices__top
 					.p-top__left
 					.p-top__middle
@@ -509,7 +594,7 @@ body
 							.price__block
 								.slash-block
 
-							.price__block
+							.price__block.wow.flipInY
 								.price-b__main
 									h5.p-block__title Дизайн-проект
 									ul.p-block__list
@@ -536,7 +621,7 @@ body
 							.price__block-mobile-small
 								.slash-block
 
-							.price__block
+							.price__block.wow.flipInY
 								.price-b__main
 									h5.p-block__title Дизайн-проект
 									ul.p-block__list
@@ -559,7 +644,7 @@ body
 							.price__block-mobile
 								.slash-block
 
-							.price__block
+							.price__block.wow.flipInY
 								.price-b__main
 									h5.p-block__title Дизайн-проект
 									ul.p-block__list
@@ -579,7 +664,7 @@ body
 							.price__block-mobile-small
 								.slash-block
 
-							.price__block
+							.price__block.wow.flipInY
 								.price-b__main
 									h5.p-block__title Дизайн-проект
 									ul.p-block__list
@@ -594,29 +679,29 @@ body
 						ul.desc__list
 							li.desc__elemen
 								.prices__descriptions
-									.desc_group
-									.desc_group
-									.desc_group Удаленная работа - 10% скидка
-									.desc_group
+									.desc_group.wow.fadeInLeft
+									.desc_group.wow.fadeInLeft
+									.desc_group.wow.fadeInLeft Удаленная работа - 10% скидка
+									.desc_group.wow.fadeInLeft
 
 						ul.desc__list
 							li.desc__elemen
 								.prices__descriptions
-									.desc_group
-									.desc_group
-									.desc_group Выезд в пределах МКАД - бесплатно
-									.desc_group
+									.desc_group.wow.fadeInRight
+									.desc_group.wow.fadeInRight
+									.desc_group.wow.fadeInRight Выезд в пределах МКАД - бесплатно
+									.desc_group.wow.fadeInRight
 
 						ul.desc__list
 							li.desc__elemen
 								.prices__descriptions
-									.desc_group
-									.desc_group
-									.desc_group Первичная консультация 1-3 часа
-									.desc_group
+									.desc_group.wow.fadeInLeft(data-wow-delay="0.5s")
+									.desc_group.wow.fadeInLeft(data-wow-delay="0.5s")
+									.desc_group.wow.fadeInLeft(data-wow-delay="0.5s") Первичная консультация 1-3 часа
+									.desc_group.wow.fadeInLeft(data-wow-delay="0.5s")
 
 					//- страницы
-					.prices__pagers.page__pagers 
+					.prices__pagers.page__pagers.wow.fadeInRight
 						.pagers__wrap
 							span.pagers_number 05
 							ul.pagers__list
@@ -633,21 +718,21 @@ body
 
 		.row
 			.sale__wrap
-				.sale__left
+				.sale__left.wow.fadeInLeft
 					.sale__content
 						h3 Скидка 20%
 						p Забронируйте видеозвонок, чтобы обсудить ваши потребности и познакомиться с нашей коллекцией виртуально. При желании вы можете показать нам ваше пространство. Но это вовсе не обязательно.
 
 						a.btn Забронирорвать
 
-				.sale__right
+				.sale__right.wow.fadeInRight
 					img(src="images/sale.jpg", alt="sale.jpg")
 
 
 
 		.row 
-			.contact__form 
-				.form__content
+			.contact__form#contatct
+				.form__content.wow.swing(data-wow-duration="2s")
 					h4.form__title.section__title Как начать работу?
 
 					p.form__desc Если вы хотите рассчитать стоимость вашего дизайн-проекта, свяжитесь, пожалуйста, с нами любым удобным для вас способом
@@ -661,7 +746,7 @@ body
 						input(type="submit", value="Отправить").form__btn
 
 
-				.form__pages.page__pagers 
+				.form__pages.page__pagers.wow.fadeInRight
 					.pagers__wrap
 							span.pagers_number 06
 							ul.pagers__list
