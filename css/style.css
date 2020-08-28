@@ -156,10 +156,17 @@ input {
 .menu .menu__block-center .menu__element-logo .logo {
   width: 100%;
 }
-.menu .instagram__wrap {
+.menu .instagram__wrap a {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  height: 100%;
+}
+.menu .menu_instagram {
+  padding: 0;
+  width: 50%;
+  display: inline-block;
 }
 .menu .menu_instagram {
   width: 30%;

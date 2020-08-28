@@ -196,9 +196,19 @@ input {
 	}
 
 	.instagram__wrap {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			height: 100%;
+		}
+	}
+
+	.menu_instagram{
+		padding: 0;
+		width: 50%;
+		display: inline-block;
 	}
 
 	.menu_instagram {

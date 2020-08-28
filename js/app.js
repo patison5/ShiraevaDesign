@@ -112,7 +112,7 @@ window.onload = function() {
 			top = $(id).offset().top - mg;
 			// top = $(id).offset().top - mg - 15;
 
-			$('.mobile-menu__wrap').toggleClass('active');
+			$('.mobile-menu__wrap').removeClass('active');
 
 			$('body, html').animate({scrollTop: top}, 1500);
         });
